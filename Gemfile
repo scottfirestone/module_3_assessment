@@ -11,11 +11,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
+gem "faraday"
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem "figaro"
 end
 
 group :development do
