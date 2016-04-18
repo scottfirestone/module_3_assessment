@@ -14,9 +14,10 @@ gem "less-rails"
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
 end
-
