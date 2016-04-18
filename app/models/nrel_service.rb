@@ -1,11 +1,13 @@
 class NrelService
   def initialize
     @_key = ENV["nrel_api_key"]
-    @_connection = Faraday.new "https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1&api_key=#{key}"
+    @_connection = Faraday.new "https://api.data.gov/nrel/"
   end
 
   def search(zip)
     response = connection.get do |req|
+      req.url = 
+      req.headers['api_key'] = key
       req.params['location'] = zip
     end
     JSON.parse(response.body, symbolize_names: true)
